@@ -22,7 +22,7 @@
     "--filesystem=home",
     "--filesystem=/run/media",
     "--filesystem=/media",
-    "--device=dri",
+    "--device=all",
     "--talk-name=com.canonical.AppMenu.Registrar",
     "--talk-name=org.kde.kconfig.notify",
     "--talk-name=org.kde.KGlobalSettings",
