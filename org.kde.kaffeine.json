@@ -1,12 +1,12 @@
 {
   "app-id": "org.kde.kaffeine",
   "runtime": "org.kde.Platform",
-  "runtime-version": "5.15-21.08",
+  "runtime-version": "5.15-22.08",
   "sdk": "org.kde.Sdk",
   "add-extensions": {
     "org.freedesktop.Platform.ffmpeg-full": {
         "directory": "lib/ffmpeg",
-        "version": "21.08",
+        "version": "22.08",
         "add-ld-path": ".",
         "no-autodownload": true,
         "autodelete": false
@@ -234,8 +234,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://get.videolan.org/vlc/3.0.17.4/vlc-3.0.17.4.tar.xz",
-          "sha256": "8c5a62d88a4fb45c1b095cf10befef217dfa87aedcec5184b9e7d590b6dd4133"
+          "url": "https://get.videolan.org/vlc/3.0.18/vlc-3.0.18.tar.xz",
+          "sha256": "57094439c365d8aa8b9b41fa3080cc0eef2befe6025bb5cef722accc625aedec"
         },
         {
             "type": "patch",
