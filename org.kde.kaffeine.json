@@ -1,12 +1,12 @@
 {
   "app-id": "org.kde.kaffeine",
   "runtime": "org.kde.Platform",
-  "runtime-version": "5.15-22.08",
+  "runtime-version": "5.15-23.08",
   "sdk": "org.kde.Sdk",
   "add-extensions": {
     "org.freedesktop.Platform.ffmpeg-full": {
         "directory": "lib/ffmpeg",
-        "version": "22.08",
+        "version": "23.08",
         "add-ld-path": ".",
         "no-autodownload": true,
         "autodelete": false
