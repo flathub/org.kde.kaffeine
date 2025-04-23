@@ -232,9 +232,15 @@
       ],
       "sources": [
         {
-          "type": "archive",
-          "url": "https://get.videolan.org/vlc/3.0.18/vlc-3.0.18.tar.xz",
-          "sha256": "57094439c365d8aa8b9b41fa3080cc0eef2befe6025bb5cef722accc625aedec"
+            "type": "archive",
+            "url": "https://get.videolan.org/vlc/3.0.21/vlc-3.0.21.tar.xz",
+            "sha256": "24dbbe1d7dfaeea0994d5def0bbde200177347136dbfe573f5b6a4cee25afbb0",
+            "x-checker-data": {
+                "type": "anitya",
+                "project-id": 6504,
+                "stable-only": true,
+                "url-template": "https://get.videolan.org/vlc/$version/vlc-$version.tar.xz"
+            }
         },
         {
             "type": "patch",
