@@ -261,10 +261,6 @@
           "type": "archive",
           "url": "https://invent.kde.org/multimedia/kaffeine/-/archive/v2.0.19/kaffeine-v2.0.19.tar.gz",
           "sha256": "db296c440c81a23b8babbd06a40cb723ceab2f375971e38c0451cbc68db99cd0"
-        },
-        {
-          "type": "patch",
-          "path": "appdata.patch"
         }
       ]
     }
