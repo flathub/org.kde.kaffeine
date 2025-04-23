@@ -29,7 +29,6 @@
     "--talk-name=org.kde.StatusNotifierWatcher",
     "--talk-name=org.mpris.MediaPlayer2.Player",
     "--talk-name=org.freedesktop.ScreenSaver",
-    "--own-name=org.mpris.MediaPlayer2.org.kde.kaffeine",
     "--system-talk-name=org.freedesktop.UDisks2",
     "--system-talk-name=org.freedesktop.UPower"
   ],
@@ -169,7 +168,7 @@
         {
           "type": "archive",
           "url": "https://sourceforge.net/projects/modplug-xmms/files/libmodplug/0.8.9.0/libmodplug-0.8.9.0.tar.gz",
-          "md5": "5ba16981e6515975e9a68a58d5ba69d1"
+          "sha256": "457ca5a6c179656d66c01505c0d95fafaead4329b9dbaa0f997d00a3508ad9de"
         }
       ]
     },
