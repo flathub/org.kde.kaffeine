@@ -1,17 +1,8 @@
 {
   "app-id": "org.kde.kaffeine",
   "runtime": "org.kde.Platform",
-  "runtime-version": "5.15-23.08",
+  "runtime-version": "5.15-24.08",
   "sdk": "org.kde.Sdk",
-  "add-extensions": {
-    "org.freedesktop.Platform.ffmpeg-full": {
-        "directory": "lib/ffmpeg",
-        "version": "23.08",
-        "add-ld-path": ".",
-        "no-autodownload": true,
-        "autodelete": false
-    }
-  },
   "command": "kaffeine",
   "rename-icon": "kaffeine",
   "finish-args": [
@@ -29,16 +20,29 @@
     "--talk-name=org.kde.StatusNotifierWatcher",
     "--talk-name=org.mpris.MediaPlayer2.Player",
     "--talk-name=org.freedesktop.ScreenSaver",
-    "--own-name=org.mpris.MediaPlayer2.org.kde.kaffeine",
     "--system-talk-name=org.freedesktop.UDisks2",
     "--system-talk-name=org.freedesktop.UPower"
   ],
   "modules": [
     {
       "name": "ffmpeg",
-      "buildsystem" : "simple",
-      "build-commands": [
-        "install -dm755 ${FLATPAK_DEST}/lib/ffmpeg"
+      "config-opts": [
+          "--enable-pic",
+          "--enable-shared",
+          "--disable-doc",
+          "--disable-static",
+          "--enable-gpl",
+          "--enable-libvpx",
+          "--enable-libmp3lame",
+          "--enable-libvorbis",
+          "--enable-libopus"
+      ],
+        "sources": [
+        {
+          "type": "archive",
+          "url": "https://ffmpeg.org/releases/ffmpeg-4.4.5.tar.xz",
+          "sha256": "f9514e0d3515aee5a271283df71636e1d1ff7274b15853bcd84e144be416ab07"
+        }
       ]
     },
     {
@@ -169,7 +173,7 @@
         {
           "type": "archive",
           "url": "https://sourceforge.net/projects/modplug-xmms/files/libmodplug/0.8.9.0/libmodplug-0.8.9.0.tar.gz",
-          "md5": "5ba16981e6515975e9a68a58d5ba69d1"
+          "sha256": "457ca5a6c179656d66c01505c0d95fafaead4329b9dbaa0f997d00a3508ad9de"
         }
       ]
     },
@@ -233,9 +237,15 @@
       ],
       "sources": [
         {
-          "type": "archive",
-          "url": "https://get.videolan.org/vlc/3.0.18/vlc-3.0.18.tar.xz",
-          "sha256": "57094439c365d8aa8b9b41fa3080cc0eef2befe6025bb5cef722accc625aedec"
+            "type": "archive",
+            "url": "https://get.videolan.org/vlc/3.0.21/vlc-3.0.21.tar.xz",
+            "sha256": "24dbbe1d7dfaeea0994d5def0bbde200177347136dbfe573f5b6a4cee25afbb0",
+            "x-checker-data": {
+                "type": "anitya",
+                "project-id": 6504,
+                "stable-only": true,
+                "url-template": "https://get.videolan.org/vlc/$version/vlc-$version.tar.xz"
+            }
         },
         {
             "type": "patch",
@@ -249,18 +259,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://download.kde.org/stable/kaffeine/kaffeine-2.0.18.tar.xz",
-          "sha256": "d9799a5b7b94a55963f94938b36b8fcb1be3e753b2be110989934ab15386b681",
-          "x-checker-data": {
-            "type": "anitya",
-            "project-id": 5557,
-            "stable-only": true,
-            "url-template": "https://download.kde.org/stable/kaffeine/kaffeine-$version.tar.xz"
-          }
-        },
-        {
-          "type": "patch",
-          "path": "appdata.patch"
+          "url": "https://invent.kde.org/multimedia/kaffeine/-/archive/v2.0.19/kaffeine-v2.0.19.tar.gz",
+          "sha256": "db296c440c81a23b8babbd06a40cb723ceab2f375971e38c0451cbc68db99cd0"
         }
       ]
     }
