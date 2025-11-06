@@ -228,10 +228,6 @@
         },
         {
           "type": "patch",
-          "path": "0001-Fix-for-CMake-Build-Errors-in-MacOS.patch"
-        },
-        {
-          "type": "patch",
           "path": "0001-Fix-CMake-build-error-with-latest-CMake-4.0-release.patch"
         }
       ]
