@@ -1,275 +1,275 @@
 {
-  "app-id": "org.kde.kaffeine",
-  "runtime": "org.kde.Platform",
-  "runtime-version": "5.15-25.08",
-  "sdk": "org.kde.Sdk",
-  "command": "kaffeine",
-  "rename-icon": "kaffeine",
-  "finish-args": [
-    "--share=ipc",
-    "--share=network",
-    "--socket=x11",
-    "--socket=pulseaudio",
-    "--filesystem=home",
-    "--filesystem=/run/media",
-    "--filesystem=/media",
-    "--device=all",
-    "--talk-name=com.canonical.AppMenu.Registrar",
-    "--talk-name=org.kde.kconfig.notify",
-    "--talk-name=org.kde.KGlobalSettings",
-    "--talk-name=org.kde.StatusNotifierWatcher",
-    "--talk-name=org.mpris.MediaPlayer2.Player",
-    "--talk-name=org.freedesktop.ScreenSaver",
-    "--system-talk-name=org.freedesktop.UDisks2",
-    "--system-talk-name=org.freedesktop.UPower"
-  ],
-  "modules": [
-    {
-      "name": "ffmpeg",
-      "config-opts": [
-        "--enable-pic",
-        "--enable-shared",
-        "--disable-doc",
-        "--disable-static",
-        "--enable-gpl",
-        "--enable-libvpx",
-        "--enable-libmp3lame",
-        "--enable-libvorbis",
-        "--enable-libopus"
-      ],
-      "sources": [
+    "app-id": "org.kde.kaffeine",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "5.15-25.08",
+    "sdk": "org.kde.Sdk",
+    "command": "kaffeine",
+    "rename-icon": "kaffeine",
+    "finish-args": [
+        "--share=ipc",
+        "--share=network",
+        "--socket=x11",
+        "--socket=pulseaudio",
+        "--filesystem=home",
+        "--filesystem=/run/media",
+        "--filesystem=/media",
+        "--device=all",
+        "--talk-name=com.canonical.AppMenu.Registrar",
+        "--talk-name=org.kde.kconfig.notify",
+        "--talk-name=org.kde.KGlobalSettings",
+        "--talk-name=org.kde.StatusNotifierWatcher",
+        "--talk-name=org.mpris.MediaPlayer2.Player",
+        "--talk-name=org.freedesktop.ScreenSaver",
+        "--system-talk-name=org.freedesktop.UDisks2",
+        "--system-talk-name=org.freedesktop.UPower"
+    ],
+    "modules": [
         {
-          "type": "archive",
-          "url": "https://ffmpeg.org/releases/ffmpeg-4.4.5.tar.xz",
-          "sha256": "f9514e0d3515aee5a271283df71636e1d1ff7274b15853bcd84e144be416ab07"
-        }
-      ]
-    },
-    {
-      "name": "libdvdread",
-      "rm-configure": true,
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://download.videolan.org/videolan/libdvdread/6.1.2/libdvdread-6.1.2.tar.bz2",
-          "sha256": "cc190f553758ced7571859e301f802cb4821f164d02bfacfd320c14a4e0da763"
+            "name": "ffmpeg",
+            "config-opts": [
+                "--enable-pic",
+                "--enable-shared",
+                "--disable-doc",
+                "--disable-static",
+                "--enable-gpl",
+                "--enable-libvpx",
+                "--enable-libmp3lame",
+                "--enable-libvorbis",
+                "--enable-libopus"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://ffmpeg.org/releases/ffmpeg-4.4.5.tar.xz",
+                    "sha256": "f9514e0d3515aee5a271283df71636e1d1ff7274b15853bcd84e144be416ab07"
+                }
+            ]
         },
         {
-          "type": "script",
-          "commands": [
-            "autoreconf -fiv"
-          ],
-          "dest-filename": "autogen.sh"
-        }
-      ]
-    },
-    {
-      "name": "libdvdnav",
-      "rm-configure": true,
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://download.videolan.org/videolan/libdvdnav/6.1.1/libdvdnav-6.1.1.tar.bz2",
-          "sha256": "c191a7475947d323ff7680cf92c0fb1be8237701885f37656c64d04e98d18d48"
+            "name": "libdvdread",
+            "rm-configure": true,
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.videolan.org/videolan/libdvdread/6.1.2/libdvdread-6.1.2.tar.bz2",
+                    "sha256": "cc190f553758ced7571859e301f802cb4821f164d02bfacfd320c14a4e0da763"
+                },
+                {
+                    "type": "script",
+                    "commands": [
+                        "autoreconf -fiv"
+                    ],
+                    "dest-filename": "autogen.sh"
+                }
+            ]
         },
         {
-          "type": "script",
-          "commands": [
-            "autoreconf -fiv"
-          ],
-          "dest-filename": "autogen.sh"
-        }
-      ]
-    },
-    {
-      "name": "libdvdcss",
-      "rm-configure": true,
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://download.videolan.org/videolan/libdvdcss/1.4.3/libdvdcss-1.4.3.tar.bz2",
-          "sha256": "233cc92f5dc01c5d3a96f5b3582be7d5cee5a35a52d3a08158745d3d86070079"
+            "name": "libdvdnav",
+            "rm-configure": true,
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.videolan.org/videolan/libdvdnav/6.1.1/libdvdnav-6.1.1.tar.bz2",
+                    "sha256": "c191a7475947d323ff7680cf92c0fb1be8237701885f37656c64d04e98d18d48"
+                },
+                {
+                    "type": "script",
+                    "commands": [
+                        "autoreconf -fiv"
+                    ],
+                    "dest-filename": "autogen.sh"
+                }
+            ]
         },
         {
-          "type": "script",
-          "commands": [
-            "autoreconf -fiv"
-          ],
-          "dest-filename": "autogen.sh"
-        }
-      ]
-    },
-    {
-      "name": "libbluray",
-      "config-opts": [
-        "--disable-bdjava-jar"
-      ],
-      "cleanup": [
-        "/include",
-        "*.a",
-        "*.la",
-        "*.pc",
-        "/lib/*.so"
-      ],
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://download.videolan.org/pub/videolan/libbluray/1.3.0/libbluray-1.3.0.tar.bz2",
-          "sha256": "e2dbaf99e84e0a9725f4985bcb85d41e52c2261cc651d8884b1b790b5ef016f9"
-        }
-      ]
-    },
-    {
-      "name": "libdvbpsi",
-      "rm-configure": true,
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://download.videolan.org/pub/libdvbpsi/1.3.3/libdvbpsi-1.3.3.tar.bz2",
-          "sha256": "02b5998bcf289cdfbd8757bedd5987e681309b0a25b3ffe6cebae599f7a00112"
+            "name": "libdvdcss",
+            "rm-configure": true,
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.videolan.org/videolan/libdvdcss/1.4.3/libdvdcss-1.4.3.tar.bz2",
+                    "sha256": "233cc92f5dc01c5d3a96f5b3582be7d5cee5a35a52d3a08158745d3d86070079"
+                },
+                {
+                    "type": "script",
+                    "commands": [
+                        "autoreconf -fiv"
+                    ],
+                    "dest-filename": "autogen.sh"
+                }
+            ]
         },
         {
-          "type": "script",
-          "commands": [
-            "autoreconf -fiv"
-          ],
-          "dest-filename": "autogen.sh"
-        }
-      ]
-    },
-    {
-      "name": "libmpeg2",
-      "config-opts": [
-        "--enable-shared",
-        "--disable-static"
-      ],
-      "rm-configure": true,
-      "cleanup": [
-        "/bin/*mpeg2*"
-      ],
-      "sources": [
-        {
-          "type": "archive",
-          "url": "http://libmpeg2.sourceforge.net/files/libmpeg2-0.5.1.tar.gz",
-          "sha256": "dee22e893cb5fc2b2b6ebd60b88478ab8556cb3b93f9a0d7ce8f3b61851871d4"
+            "name": "libbluray",
+            "config-opts": [
+                "--disable-bdjava-jar"
+            ],
+            "cleanup": [
+                "/include",
+                "*.a",
+                "*.la",
+                "*.pc",
+                "/lib/*.so"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.videolan.org/pub/videolan/libbluray/1.3.0/libbluray-1.3.0.tar.bz2",
+                    "sha256": "e2dbaf99e84e0a9725f4985bcb85d41e52c2261cc651d8884b1b790b5ef016f9"
+                }
+            ]
         },
         {
-          "type": "script",
-          "commands": [
-            "autoreconf -fiv"
-          ],
-          "dest-filename": "autogen.sh"
-        }
-      ]
-    },
-    {
-      "name": "libmodplug",
-      "cleanup": [
-        "/include",
-        "/lib/pkgconfig",
-        "/lib/*.la"
-      ],
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://sourceforge.net/projects/modplug-xmms/files/libmodplug/0.8.9.0/libmodplug-0.8.9.0.tar.gz",
-          "sha256": "457ca5a6c179656d66c01505c0d95fafaead4329b9dbaa0f997d00a3508ad9de"
-        }
-      ]
-    },
-    {
-      "name": "libass",
-      "config-opts": [
-        "--enable-harfbuzz",
-        "--enable-fontconfig"
-      ],
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://github.com/libass/libass/releases/download/0.15.2/libass-0.15.2.tar.xz",
-          "sha256": "1be2df9c4485a57d78bb18c0a8ed157bc87a5a8dd48c661961c625cb112832fd"
+            "name": "libdvbpsi",
+            "rm-configure": true,
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.videolan.org/pub/libdvbpsi/1.3.3/libdvbpsi-1.3.3.tar.bz2",
+                    "sha256": "02b5998bcf289cdfbd8757bedd5987e681309b0a25b3ffe6cebae599f7a00112"
+                },
+                {
+                    "type": "script",
+                    "commands": [
+                        "autoreconf -fiv"
+                    ],
+                    "dest-filename": "autogen.sh"
+                }
+            ]
         },
         {
-          "type": "script",
-          "commands": [
-            "autoreconf -fiv"
-          ],
-          "dest-filename": "autogen.sh"
-        }
-      ]
-    },
-    {
-      "name": "x264",
-      "config-opts": [
-        "--enable-pic",
-        "--enable-shared"
-      ],
-      "sources": [
-        {
-          "type": "git",
-          "url": "https://code.videolan.org/videolan/x264.git",
-          "commit": "5db6aa6cab1b146e07b60cc1736a01f21da01154"
-        }
-      ]
-    },
-    {
-      "name": "x265",
-      "builddir": true,
-      "subdir": "source",
-      "buildsystem": "cmake-ninja",
-      "config-opts": [
-        "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
-      ],
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://bitbucket.org/multicoreware/x265_git/downloads/x265_3.5.tar.gz",
-          "sha256": "e70a3335cacacbba0b3a20ec6fecd6783932288ebc8163ad74bcc9606477cae8"
+            "name": "libmpeg2",
+            "config-opts": [
+                "--enable-shared",
+                "--disable-static"
+            ],
+            "rm-configure": true,
+            "cleanup": [
+                "/bin/*mpeg2*"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://libmpeg2.sourceforge.net/files/libmpeg2-0.5.1.tar.gz",
+                    "sha256": "dee22e893cb5fc2b2b6ebd60b88478ab8556cb3b93f9a0d7ce8f3b61851871d4"
+                },
+                {
+                    "type": "script",
+                    "commands": [
+                        "autoreconf -fiv"
+                    ],
+                    "dest-filename": "autogen.sh"
+                }
+            ]
         },
         {
-          "type": "patch",
-          "path": "0001-Fix-CMake-build-error-with-latest-CMake-4.0-release.patch"
-        }
-      ]
-    },
-    {
-      "name": "libvlc",
-      "config-opts": [
-        "BUILDCC=gcc",
-        "--disable-lua",
-        "--disable-a52",
-        "--disable-qt",
-        "--disable-ncurses",
-        "--disable-udev"
-      ],
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://get.videolan.org/vlc/3.0.21/vlc-3.0.21.tar.xz",
-          "sha256": "24dbbe1d7dfaeea0994d5def0bbde200177347136dbfe573f5b6a4cee25afbb0",
-          "x-checker-data": {
-            "type": "anitya",
-            "project-id": 6504,
-            "stable-only": true,
-            "url-template": "https://get.videolan.org/vlc/$version/vlc-$version.tar.xz"
-          }
+            "name": "libmodplug",
+            "cleanup": [
+                "/include",
+                "/lib/pkgconfig",
+                "/lib/*.la"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://sourceforge.net/projects/modplug-xmms/files/libmodplug/0.8.9.0/libmodplug-0.8.9.0.tar.gz",
+                    "sha256": "457ca5a6c179656d66c01505c0d95fafaead4329b9dbaa0f997d00a3508ad9de"
+                }
+            ]
         },
         {
-          "type": "patch",
-          "path": "vlc-ignore-time-size-for-cache.patch"
-        }
-      ]
-    },
-    {
-      "name": "kaffeine",
-      "buildsystem": "cmake-ninja",
-      "sources": [
+            "name": "libass",
+            "config-opts": [
+                "--enable-harfbuzz",
+                "--enable-fontconfig"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/libass/libass/releases/download/0.15.2/libass-0.15.2.tar.xz",
+                    "sha256": "1be2df9c4485a57d78bb18c0a8ed157bc87a5a8dd48c661961c625cb112832fd"
+                },
+                {
+                    "type": "script",
+                    "commands": [
+                        "autoreconf -fiv"
+                    ],
+                    "dest-filename": "autogen.sh"
+                }
+            ]
+        },
         {
-          "type": "archive",
-          "url": "https://invent.kde.org/multimedia/kaffeine/-/archive/v2.0.19/kaffeine-v2.0.19.tar.gz",
-          "sha256": "db296c440c81a23b8babbd06a40cb723ceab2f375971e38c0451cbc68db99cd0"
+            "name": "x264",
+            "config-opts": [
+                "--enable-pic",
+                "--enable-shared"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://code.videolan.org/videolan/x264.git",
+                    "commit": "5db6aa6cab1b146e07b60cc1736a01f21da01154"
+                }
+            ]
+        },
+        {
+            "name": "x265",
+            "builddir": true,
+            "subdir": "source",
+            "buildsystem": "cmake-ninja",
+            "config-opts": [
+                "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://bitbucket.org/multicoreware/x265_git/downloads/x265_3.5.tar.gz",
+                    "sha256": "e70a3335cacacbba0b3a20ec6fecd6783932288ebc8163ad74bcc9606477cae8"
+                },
+                {
+                    "type": "patch",
+                    "path": "0001-Fix-CMake-build-error-with-latest-CMake-4.0-release.patch"
+                }
+            ]
+        },
+        {
+            "name": "libvlc",
+            "config-opts": [
+                "BUILDCC=gcc",
+                "--disable-lua",
+                "--disable-a52",
+                "--disable-qt",
+                "--disable-ncurses",
+                "--disable-udev"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://get.videolan.org/vlc/3.0.22/vlc-3.0.22.tar.xz",
+                    "sha256": "e2cc1cf0ae0902a09da5a37c249a8a4e4b5ec4dc095443b8e1493c6a7cc138ea",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 6504,
+                        "stable-only": true,
+                        "url-template": "https://get.videolan.org/vlc/$version/vlc-$version.tar.xz"
+                    }
+                },
+                {
+                    "type": "patch",
+                    "path": "vlc-ignore-time-size-for-cache.patch"
+                }
+            ]
+        },
+        {
+            "name": "kaffeine",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://invent.kde.org/multimedia/kaffeine/-/archive/v2.0.19/kaffeine-v2.0.19.tar.gz",
+                    "sha256": "db296c440c81a23b8babbd06a40cb723ceab2f375971e38c0451cbc68db99cd0"
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
