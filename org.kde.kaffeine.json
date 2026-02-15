@@ -23,6 +23,14 @@
         "--system-talk-name=org.freedesktop.UDisks2",
         "--system-talk-name=org.freedesktop.UPower"
     ],
+     "cleanup": [
+        "/include",
+        "/lib/pkgconfig",
+        "/share/doc",
+        "/share/man",
+        "*.la",
+        "*.a"
+    ],
     "modules": [
         {
             "name": "libdvdread",
